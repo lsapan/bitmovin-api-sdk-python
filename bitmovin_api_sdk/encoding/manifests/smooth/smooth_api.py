@@ -61,7 +61,7 @@ class SmoothApi(BaseApi):
         # type: (SmoothStreamingManifest, dict) -> SmoothStreamingManifest
         """Create Smooth Streaming Manifest
 
-        :param smooth_streaming_manifest: The Smooth Streaming Manifest to be created
+        :param smooth_streaming_manifest: The Custom Smooth Streaming Manifest to be created.
         :type smooth_streaming_manifest: SmoothStreamingManifest, required
         :return: Smooth Streaming manifest
         :rtype: SmoothStreamingManifest
@@ -78,7 +78,7 @@ class SmoothApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete Smooth Streaming Manifest
 
-        :param manifest_id: Id of the Smooth Streaming manifest.
+        :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
         :return: Id of the manifest
         :rtype: BitmovinResponse
@@ -95,7 +95,7 @@ class SmoothApi(BaseApi):
         # type: (string_types, dict) -> SmoothStreamingManifest
         """Smooth Streaming Manifest Details
 
-        :param manifest_id: Id of the Smooth Streaming manifest.
+        :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
         :return: Manifest details
         :rtype: SmoothStreamingManifest
@@ -105,6 +105,23 @@ class SmoothApi(BaseApi):
             '/encoding/manifests/smooth/{manifest_id}',
             path_params={'manifest_id': manifest_id},
             type=SmoothStreamingManifest,
+            **kwargs
+        )
+
+    def get_start_request(self, manifest_id, **kwargs):
+        # type: (string_types, dict) -> StartManifestRequest
+        """Manifest Start Details
+
+        :param manifest_id: Id of the manifest
+        :type manifest_id: string_types, required
+        :return: Service specific result
+        :rtype: StartManifestRequest
+        """
+
+        return self.api_client.get(
+            '/encoding/manifests/smooth/{manifest_id}/start',
+            path_params={'manifest_id': manifest_id},
+            type=StartManifestRequest,
             **kwargs
         )
 
@@ -128,9 +145,9 @@ class SmoothApi(BaseApi):
 
     def start(self, manifest_id, start_manifest_request=None, **kwargs):
         # type: (string_types, StartManifestRequest, dict) -> BitmovinResponse
-        """Start Smooth Streaming Manifest Creation
+        """Start Smooth Streaming manifest generation
 
-        :param manifest_id: Id of the Smooth Streaming manifest.
+        :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
         :param start_manifest_request: Manifest Startup Options
         :type start_manifest_request: StartManifestRequest
@@ -148,11 +165,11 @@ class SmoothApi(BaseApi):
 
     def status(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> Task
-        """Smooth Streaming Manifest Creation Status
+        """Smooth Streaming manifest generation status
 
-        :param manifest_id: Id of the Smooth Streaming manifest.
+        :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
-        :return: Status of manifest creation
+        :return: Status of manifest generation
         :rtype: Task
         """
 
@@ -165,11 +182,11 @@ class SmoothApi(BaseApi):
 
     def stop(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Stop Smooth Streaming Manifest Creation
+        """Stop Smooth Streaming manifest generation
 
-        :param manifest_id: Id of the Smooth Streaming manifest.
+        :param manifest_id: Id of the Smooth Streaming Manifest.
         :type manifest_id: string_types, required
-        :return: Id of the Smooth Streaming manifest
+        :return: Id of the Smooth Streaming Manifest
         :rtype: BitmovinResponse
         """
 

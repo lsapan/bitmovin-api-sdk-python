@@ -9,6 +9,7 @@ from bitmovin_api_sdk.models.live_encoding import LiveEncoding
 from bitmovin_api_sdk.models.response_envelope import ResponseEnvelope
 from bitmovin_api_sdk.models.response_error import ResponseError
 from bitmovin_api_sdk.models.start_live_encoding_request import StartLiveEncodingRequest
+from bitmovin_api_sdk.encoding.encodings.live.hd.hd_api import HdApi
 from bitmovin_api_sdk.encoding.encodings.live.insertable_content.insertable_content_api import InsertableContentApi
 from bitmovin_api_sdk.encoding.encodings.live.scte35_cue.scte35_cue_api import Scte35CueApi
 
@@ -19,6 +20,13 @@ class LiveApi(BaseApi):
         # type: (str, str, str, BitmovinApiLoggerBase) -> None
 
         super(LiveApi, self).__init__(
+            api_key=api_key,
+            tenant_org_id=tenant_org_id,
+            base_url=base_url,
+            logger=logger
+        )
+
+        self.hd = HdApi(
             api_key=api_key,
             tenant_org_id=tenant_org_id,
             base_url=base_url,
@@ -77,7 +85,7 @@ class LiveApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Re-Start Live Encoding
 
-        :param encoding_id: Id of the encoding
+        :param encoding_id: Id of the encoding.  **Important:** Only live encodings with the status &#x60;RUNNING&#x60;, &#x60;FINISHED&#x60;, &#x60;CANCELED&#x60; or &#x60;ERROR&#x60; can be restarted. 
         :type encoding_id: string_types, required
         :return: Id of the encoding
         :rtype: BitmovinResponse

@@ -12,9 +12,10 @@ import six
 class SimpleEncodingVodJobCdnOutput(SimpleEncodingVodJobOutput):
     @poscheck_model
     def __init__(self,
+                 artifacts=None,
                  max_resolution=None):
-        # type: (SimpleEncodingLiveMaxResolution) -> None
-        super(SimpleEncodingVodJobCdnOutput, self).__init__()
+        # type: (list[SimpleEncodingVodJobOutputArtifact], SimpleEncodingLiveMaxResolution) -> None
+        super(SimpleEncodingVodJobCdnOutput, self).__init__(artifacts=artifacts)
 
         self._max_resolution = None
         self.discriminator = None
@@ -52,7 +53,7 @@ class SimpleEncodingVodJobCdnOutput(SimpleEncodingVodJobOutput):
         # type: () -> SimpleEncodingLiveMaxResolution
         """Gets the max_resolution of this SimpleEncodingVodJobCdnOutput.
 
-        This sets the maximum output resolution that will be generated.
+        The maximum output resolution to be generated
 
         :return: The max_resolution of this SimpleEncodingVodJobCdnOutput.
         :rtype: SimpleEncodingLiveMaxResolution
@@ -64,7 +65,7 @@ class SimpleEncodingVodJobCdnOutput(SimpleEncodingVodJobOutput):
         # type: (SimpleEncodingLiveMaxResolution) -> None
         """Sets the max_resolution of this SimpleEncodingVodJobCdnOutput.
 
-        This sets the maximum output resolution that will be generated.
+        The maximum output resolution to be generated
 
         :param max_resolution: The max_resolution of this SimpleEncodingVodJobCdnOutput.
         :type: SimpleEncodingLiveMaxResolution

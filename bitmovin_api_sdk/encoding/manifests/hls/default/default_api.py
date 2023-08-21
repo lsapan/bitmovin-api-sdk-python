@@ -23,11 +23,11 @@ class DefaultApi(BaseApi):
 
     def create(self, hls_manifest_default, **kwargs):
         # type: (HlsManifestDefault, dict) -> HlsManifestDefault
-        """Create HLS Manifest Default
+        """Create Default HLS Manifest
 
-        :param hls_manifest_default: The HLS Manifest to be created
+        :param hls_manifest_default: The Default HLS Manifest to be created.
         :type hls_manifest_default: HlsManifestDefault, required
-        :return: Hls manifest
+        :return: HLS manifest
         :rtype: HlsManifestDefault
         """
 

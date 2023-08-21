@@ -23,11 +23,11 @@ class DefaultApi(BaseApi):
 
     def create(self, smooth_manifest_default, **kwargs):
         # type: (SmoothManifestDefault, dict) -> SmoothManifestDefault
-        """Create Smooth Streaming Manifest Default
+        """Create Default Smooth Streaming Manifest
 
-        :param smooth_manifest_default: The Smooth Streaming Default Manifest to be created
+        :param smooth_manifest_default: The Default Smooth Streaming Manifest to be created.
         :type smooth_manifest_default: SmoothManifestDefault, required
-        :return: Smooth Streaming manifest
+        :return: Smooth Streaming Manifest
         :rtype: SmoothManifestDefault
         """
 

@@ -51,11 +51,11 @@ class DashApi(BaseApi):
 
     def create(self, dash_manifest, **kwargs):
         # type: (DashManifest, dict) -> DashManifest
-        """Create DASH Manifest
+        """Create Custom DASH Manifest
 
-        :param dash_manifest: The DASH manifest to be created
+        :param dash_manifest: The Custom DASH Manifest to be created.
         :type dash_manifest: DashManifest, required
-        :return: Id of the dash manifest
+        :return: Id of the DASH Manifest
         :rtype: DashManifest
         """
 
@@ -70,9 +70,9 @@ class DashApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete DASH Manifest
 
-        :param manifest_id: UUID of the DASH manifest to be deleted
+        :param manifest_id: UUID of the DASH Manifest to be deleted
         :type manifest_id: string_types, required
-        :return: Id of the dash manifest
+        :return: Id of the DASH Manifest
         :rtype: BitmovinResponse
         """
 
@@ -87,9 +87,9 @@ class DashApi(BaseApi):
         # type: (string_types, dict) -> DashManifest
         """DASH Manifest Details
 
-        :param manifest_id: UUID of the dash manifest
+        :param manifest_id: UUID of the DASH Manifest
         :type manifest_id: string_types, required
-        :return: Dash Manifest details
+        :return: DASH Manifest details
         :rtype: DashManifest
         """
 
@@ -100,13 +100,30 @@ class DashApi(BaseApi):
             **kwargs
         )
 
+    def get_start_request(self, manifest_id, **kwargs):
+        # type: (string_types, dict) -> StartManifestRequest
+        """Manifest Start Details
+
+        :param manifest_id: Id of the manifest
+        :type manifest_id: string_types, required
+        :return: Service specific result
+        :rtype: StartManifestRequest
+        """
+
+        return self.api_client.get(
+            '/encoding/manifests/dash/{manifest_id}/start',
+            path_params={'manifest_id': manifest_id},
+            type=StartManifestRequest,
+            **kwargs
+        )
+
     def list(self, query_params=None, **kwargs):
         # type: (DashManifestListQueryParams, dict) -> DashManifest
         """List DASH Manifests
 
         :param query_params: Query parameters
         :type query_params: DashManifestListQueryParams
-        :return: List of dash manifests
+        :return: List of DASH manifests
         :rtype: DashManifest
         """
 
@@ -120,9 +137,9 @@ class DashApi(BaseApi):
 
     def start(self, manifest_id, start_manifest_request=None, **kwargs):
         # type: (string_types, StartManifestRequest, dict) -> BitmovinResponse
-        """Start DASH Manifest Creation
+        """Start DASH manifest generation
 
-        :param manifest_id: Id of the DASH manifest.
+        :param manifest_id: Id of the DASH Manifest.
         :type manifest_id: string_types, required
         :param start_manifest_request: Manifest Startup Options
         :type start_manifest_request: StartManifestRequest
@@ -140,11 +157,11 @@ class DashApi(BaseApi):
 
     def status(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> Task
-        """DASH Manifest Creation Status
+        """DASH manifest generation status
 
-        :param manifest_id: Id of the DASH manifest.
+        :param manifest_id: Id of the DASH Manifest.
         :type manifest_id: string_types, required
-        :return: Status of manifest creation
+        :return: Status of manifest generation
         :rtype: Task
         """
 
@@ -157,11 +174,11 @@ class DashApi(BaseApi):
 
     def stop(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Stop DASH Manifest Creation
+        """Stop DASH manifest generation
 
-        :param manifest_id: Id of the DASH manifest.
+        :param manifest_id: Id of the DASH Manifest.
         :type manifest_id: string_types, required
-        :return: Id of the DASH manifest
+        :return: Id of the DASH Manifest
         :rtype: BitmovinResponse
         """
 

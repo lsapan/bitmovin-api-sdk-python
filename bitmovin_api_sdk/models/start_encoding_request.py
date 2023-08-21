@@ -140,7 +140,7 @@ class StartEncodingRequest(object):
         # type: () -> Scheduling
         """Gets the scheduling of this StartEncodingRequest.
 
-        Set scheduling parameters of the encoding.
+        Scheduling parameters of the encoding.
 
         :return: The scheduling of this StartEncodingRequest.
         :rtype: Scheduling
@@ -152,7 +152,7 @@ class StartEncodingRequest(object):
         # type: (Scheduling) -> None
         """Sets the scheduling of this StartEncodingRequest.
 
-        Set scheduling parameters of the encoding.
+        Scheduling parameters of the encoding.
 
         :param scheduling: The scheduling of this StartEncodingRequest.
         :type: Scheduling
@@ -169,7 +169,7 @@ class StartEncodingRequest(object):
         # type: () -> Tweaks
         """Gets the tweaks of this StartEncodingRequest.
 
-        Set special tweaks for your encoding job.
+        Special tweaks for your encoding job.
 
         :return: The tweaks of this StartEncodingRequest.
         :rtype: Tweaks
@@ -181,7 +181,7 @@ class StartEncodingRequest(object):
         # type: (Tweaks) -> None
         """Sets the tweaks of this StartEncodingRequest.
 
-        Set special tweaks for your encoding job.
+        Special tweaks for your encoding job.
 
         :param tweaks: The tweaks of this StartEncodingRequest.
         :type: Tweaks
@@ -227,7 +227,7 @@ class StartEncodingRequest(object):
         # type: () -> EncodingMode
         """Gets the encoding_mode of this StartEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :return: The encoding_mode of this StartEncodingRequest.
         :rtype: EncodingMode
@@ -239,7 +239,7 @@ class StartEncodingRequest(object):
         # type: (EncodingMode) -> None
         """Sets the encoding_mode of this StartEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :param encoding_mode: The encoding_mode of this StartEncodingRequest.
         :type: EncodingMode
@@ -256,7 +256,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the preview_dash_manifests of this StartEncodingRequest.
 
-        List of preview DASH manifests to be created
+        DASH manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The preview_dash_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -268,7 +268,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the preview_dash_manifests of this StartEncodingRequest.
 
-        List of preview DASH manifests to be created
+        DASH manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param preview_dash_manifests: The preview_dash_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -285,7 +285,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the preview_hls_manifests of this StartEncodingRequest.
 
-        List of preview HLS manifests to be created
+        HLS manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The preview_hls_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -297,7 +297,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the preview_hls_manifests of this StartEncodingRequest.
 
-        List of preview HLS manifests to be created
+        HLS manifests to be generated for previewing while the encoding is still running. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param preview_hls_manifests: The preview_hls_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -314,7 +314,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the vod_dash_manifests of this StartEncodingRequest.
 
-        List of VoD DASH manifests to be created after encoding finished successfully
+        DASH manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The vod_dash_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -326,7 +326,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the vod_dash_manifests of this StartEncodingRequest.
 
-        List of VoD DASH manifests to be created after encoding finished successfully
+        DASH manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param vod_dash_manifests: The vod_dash_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -343,7 +343,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the vod_hls_manifests of this StartEncodingRequest.
 
-        List of VoD HLS manifests to be created after encoding finished successfully
+        HLS manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The vod_hls_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -355,7 +355,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the vod_hls_manifests of this StartEncodingRequest.
 
-        List of VoD HLS manifests to be created after encoding finished successfully
+        HLS manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param vod_hls_manifests: The vod_hls_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -372,7 +372,7 @@ class StartEncodingRequest(object):
         # type: () -> list[ManifestResource]
         """Gets the vod_smooth_manifests of this StartEncodingRequest.
 
-        List of VoD SMOOTH manifests to be created after encoding finished successfully
+        Smooth Streaming manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The vod_smooth_manifests of this StartEncodingRequest.
         :rtype: list[ManifestResource]
@@ -384,7 +384,7 @@ class StartEncodingRequest(object):
         # type: (list) -> None
         """Sets the vod_smooth_manifests of this StartEncodingRequest.
 
-        List of VoD SMOOTH manifests to be created after encoding finished successfully
+        Smooth Streaming manifests to be generated right after encoding (just-in-time). See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param vod_smooth_manifests: The vod_smooth_manifests of this StartEncodingRequest.
         :type: list[ManifestResource]
@@ -401,7 +401,7 @@ class StartEncodingRequest(object):
         # type: () -> ManifestGenerator
         """Gets the manifest_generator of this StartEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Major version of the manifest generator to be used for manifests referenced in this request (by properties vodDashManifests, vodHlsManifests, vodSmoothManifests, previewDashManifests, previewHlsManifests). `V2` is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. 
 
         :return: The manifest_generator of this StartEncodingRequest.
         :rtype: ManifestGenerator
@@ -413,7 +413,7 @@ class StartEncodingRequest(object):
         # type: (ManifestGenerator) -> None
         """Sets the manifest_generator of this StartEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Major version of the manifest generator to be used for manifests referenced in this request (by properties vodDashManifests, vodHlsManifests, vodSmoothManifests, previewDashManifests, previewHlsManifests). `V2` is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. 
 
         :param manifest_generator: The manifest_generator of this StartEncodingRequest.
         :type: ManifestGenerator

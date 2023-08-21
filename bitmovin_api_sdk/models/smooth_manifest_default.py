@@ -71,7 +71,7 @@ class SmoothManifestDefault(SmoothStreamingManifest):
         # type: () -> string_types
         """Gets the encoding_id of this SmoothManifestDefault.
 
-        The id of the encoding to create a default manifest from. (required)
+        The id of the encoding to create a default manifest for (required)
 
         :return: The encoding_id of this SmoothManifestDefault.
         :rtype: string_types
@@ -83,7 +83,7 @@ class SmoothManifestDefault(SmoothStreamingManifest):
         # type: (string_types) -> None
         """Sets the encoding_id of this SmoothManifestDefault.
 
-        The id of the encoding to create a default manifest from. (required)
+        The id of the encoding to create a default manifest for (required)
 
         :param encoding_id: The encoding_id of this SmoothManifestDefault.
         :type: string_types
@@ -100,7 +100,7 @@ class SmoothManifestDefault(SmoothStreamingManifest):
         # type: () -> SmoothManifestDefaultVersion
         """Gets the version of this SmoothManifestDefault.
 
-        The version of the default manifest generator
+        Currently not in use
 
         :return: The version of this SmoothManifestDefault.
         :rtype: SmoothManifestDefaultVersion
@@ -112,7 +112,7 @@ class SmoothManifestDefault(SmoothStreamingManifest):
         # type: (SmoothManifestDefaultVersion) -> None
         """Sets the version of this SmoothManifestDefault.
 
-        The version of the default manifest generator
+        Currently not in use
 
         :param version: The version of this SmoothManifestDefault.
         :type: SmoothManifestDefaultVersion

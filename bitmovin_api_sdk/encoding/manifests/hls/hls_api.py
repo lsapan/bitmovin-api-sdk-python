@@ -59,11 +59,11 @@ class HlsApi(BaseApi):
 
     def create(self, hls_manifest, **kwargs):
         # type: (HlsManifest, dict) -> HlsManifest
-        """Create HLS Manifest
+        """Create Custom HLS Manifest
 
-        :param hls_manifest: The HLS Manifest to be created
+        :param hls_manifest: The Custom HLS Manifest to be created.
         :type hls_manifest: HlsManifest, required
-        :return: Hls manifest
+        :return: HLS manifest
         :rtype: HlsManifest
         """
 
@@ -78,9 +78,9 @@ class HlsApi(BaseApi):
         # type: (string_types, dict) -> BitmovinResponse
         """Delete HLS Manifest
 
-        :param manifest_id: Id of the hls manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: Id of the input
+        :return: Id of the HLS manifest
         :rtype: BitmovinResponse
         """
 
@@ -95,9 +95,9 @@ class HlsApi(BaseApi):
         # type: (string_types, dict) -> HlsManifest
         """HLS Manifest Details
 
-        :param manifest_id: Id of the hls manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: HLS manifest details
+        :return: HLS Manifest details
         :rtype: HlsManifest
         """
 
@@ -105,6 +105,23 @@ class HlsApi(BaseApi):
             '/encoding/manifests/hls/{manifest_id}',
             path_params={'manifest_id': manifest_id},
             type=HlsManifest,
+            **kwargs
+        )
+
+    def get_start_request(self, manifest_id, **kwargs):
+        # type: (string_types, dict) -> StartManifestRequest
+        """Manifest Start Details
+
+        :param manifest_id: ID of the manifest
+        :type manifest_id: string_types, required
+        :return: Service specific result
+        :rtype: StartManifestRequest
+        """
+
+        return self.api_client.get(
+            '/encoding/manifests/hls/{manifest_id}/start',
+            path_params={'manifest_id': manifest_id},
+            type=StartManifestRequest,
             **kwargs
         )
 
@@ -128,13 +145,13 @@ class HlsApi(BaseApi):
 
     def start(self, manifest_id, start_manifest_request=None, **kwargs):
         # type: (string_types, StartManifestRequest, dict) -> BitmovinResponse
-        """Start HLS Manifest Creation
+        """Start HLS manifest generation
 
-        :param manifest_id: Id of the HLS manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
         :param start_manifest_request: Manifest Startup Options
         :type start_manifest_request: StartManifestRequest
-        :return: Id of the manifest
+        :return: Id of the HLS manifest
         :rtype: BitmovinResponse
         """
 
@@ -148,11 +165,11 @@ class HlsApi(BaseApi):
 
     def status(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> Task
-        """HLS Manifest Creation Status
+        """HLS manifest generation status
 
-        :param manifest_id: Id of the HLS manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: Status of manifest creation
+        :return: Status of manifest generation
         :rtype: Task
         """
 
@@ -165,11 +182,11 @@ class HlsApi(BaseApi):
 
     def stop(self, manifest_id, **kwargs):
         # type: (string_types, dict) -> BitmovinResponse
-        """Stop HLS Manifest Creation
+        """Stop HLS manifest generation
 
-        :param manifest_id: Id of the HLS manifest.
+        :param manifest_id: Id of the HLS Manifest.
         :type manifest_id: string_types, required
-        :return: Id of the HLS manifest
+        :return: Id of the HLS Manifest
         :rtype: BitmovinResponse
         """
 

@@ -15,7 +15,6 @@
         <script src="../../../_static/underscore.js"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -26,11 +25,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search"  style="background: blue" >
-            <a href="../../../index.html" class="icon icon-home"> Bitmovin Python API SDK
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Bitmovin Python API SDK
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -61,9 +64,9 @@
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../../index.html">Module code</a> &raquo;</li>
-      <li>bitmovin_api_sdk.models.vp9_video_configuration</li>
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bitmovin_api_sdk.models.vp9_video_configuration</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -78,6 +81,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
 <span class="kn">from</span> <span class="nn">six</span> <span class="kn">import</span> <span class="n">string_types</span><span class="p">,</span> <span class="n">iteritems</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.common.poscheck</span> <span class="kn">import</span> <span class="n">poscheck_model</span>
+<span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.auto_level_setup</span> <span class="kn">import</span> <span class="n">AutoLevelSetup</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.color_config</span> <span class="kn">import</span> <span class="n">ColorConfig</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.display_aspect_ratio</span> <span class="kn">import</span> <span class="n">DisplayAspectRatio</span>
 <span class="kn">from</span> <span class="nn">bitmovin_api_sdk.models.encoding_mode</span> <span class="kn">import</span> <span class="n">EncodingMode</span>
@@ -143,8 +147,9 @@
                  <span class="n">aq_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">arnr_max_frames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                  <span class="n">arnr_strength</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                 <span class="n">arnr_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType) -&gt; None</span>
+                 <span class="n">arnr_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">auto_level_setup</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="c1"># type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, Vp9DynamicRangeFormat, int, int, bool, int, int, bool, int, int, int, int, int, int, int, int, bool, int, bool, int, bool, int, int, int, float, float, Vp9Quality, bool, int, Vp9AqMode, int, int, Vp9ArnrType, AutoLevelSetup) -&gt; None</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Vp9VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">id_</span><span class="o">=</span><span class="n">id_</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span> <span class="n">created_at</span><span class="o">=</span><span class="n">created_at</span><span class="p">,</span> <span class="n">modified_at</span><span class="o">=</span><span class="n">modified_at</span><span class="p">,</span> <span class="n">custom_data</span><span class="o">=</span><span class="n">custom_data</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">height</span><span class="p">,</span> <span class="n">bitrate</span><span class="o">=</span><span class="n">bitrate</span><span class="p">,</span> <span class="n">rate</span><span class="o">=</span><span class="n">rate</span><span class="p">,</span> <span class="n">pixel_format</span><span class="o">=</span><span class="n">pixel_format</span><span class="p">,</span> <span class="n">color_config</span><span class="o">=</span><span class="n">color_config</span><span class="p">,</span> <span class="n">sample_aspect_ratio_numerator</span><span class="o">=</span><span class="n">sample_aspect_ratio_numerator</span><span class="p">,</span> <span class="n">sample_aspect_ratio_denominator</span><span class="o">=</span><span class="n">sample_aspect_ratio_denominator</span><span class="p">,</span> <span class="n">display_aspect_ratio</span><span class="o">=</span><span class="n">display_aspect_ratio</span><span class="p">,</span> <span class="n">encoding_mode</span><span class="o">=</span><span class="n">encoding_mode</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_preset_configuration</span> <span class="o">=</span> <span class="kc">None</span>
@@ -180,6 +185,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_max_frames</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_strength</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">discriminator</span> <span class="o">=</span> <span class="kc">None</span>
 
         <span class="k">if</span> <span class="n">preset_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -248,6 +254,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">arnr_strength</span> <span class="o">=</span> <span class="n">arnr_strength</span>
         <span class="k">if</span> <span class="n">arnr_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">arnr_type</span> <span class="o">=</span> <span class="n">arnr_type</span>
+        <span class="k">if</span> <span class="n">auto_level_setup</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">openapi_types</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -289,7 +297,8 @@
             <span class="s1">&#39;aq_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9AqMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_max_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9ArnrType&#39;</span>
+            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Vp9ArnrType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;AutoLevelSetup&#39;</span>
         <span class="p">})</span>
 
         <span class="k">return</span> <span class="n">types</span>
@@ -334,14 +343,15 @@
             <span class="s1">&#39;aq_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;aqMode&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_max_frames&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrMaxFrames&#39;</span><span class="p">,</span>
             <span class="s1">&#39;arnr_strength&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrStrength&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrType&#39;</span>
+            <span class="s1">&#39;arnr_type&#39;</span><span class="p">:</span> <span class="s1">&#39;arnrType&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;auto_level_setup&#39;</span><span class="p">:</span> <span class="s1">&#39;autoLevelSetup&#39;</span>
         <span class="p">})</span>
         <span class="k">return</span> <span class="n">attributes</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; PresetConfiguration</span>
-        <span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the preset_configuration of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Choose from a set of preset configurations tailored for common use cases. Check out [VP9 Presets](https://bitmovin.com/docs/encoding/tutorials/vp9-presets) to see which values get applied by each preset. Explicitly setting a property to a different value will override the preset&#39;s value for that property.</span>
 
@@ -353,7 +363,7 @@
     <span class="nd">@preset_configuration</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">preset_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preset_configuration</span><span class="p">):</span>
         <span class="c1"># type: (PresetConfiguration) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the preset_configuration of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Choose from a set of preset configurations tailored for common use cases. Check out [VP9 Presets](https://bitmovin.com/docs/encoding/tutorials/vp9-presets) to see which values get applied by each preset. Explicitly setting a property to a different value will override the preset&#39;s value for that property.</span>
 
@@ -370,7 +380,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Vp9DynamicRangeFormat</span>
-        <span class="sd">&quot;&quot;&quot;Gets the dynamic_range_format of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the dynamic_range_format of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</span>
 
@@ -382,7 +392,7 @@
     <span class="nd">@dynamic_range_format</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">dynamic_range_format</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dynamic_range_format</span><span class="p">):</span>
         <span class="c1"># type: (Vp9DynamicRangeFormat) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the dynamic_range_format of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the dynamic_range_format of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Automatically configures the VP9 Video Codec to be compatible with the given SDR/HLG format. Bitmovin recommends to use the dynamic range format together with a preset configuration to achieve good results. Explicitly configured properties will take precedence over dynamic range format settings, which in turn will take precedence over preset configurations.</span>
 
@@ -399,9 +409,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the crf of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the crf of this Vp9VideoConfiguration.</span>
 
-<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+<span class="sd">        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
 
 <span class="sd">        :return: The crf of this Vp9VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -411,9 +421,9 @@
     <span class="nd">@crf</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">crf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crf</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the crf of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the crf of this Vp9VideoConfiguration.</span>
 
-<span class="sd">        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
+<span class="sd">        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.</span>
 
 <span class="sd">        :param crf: The crf of this Vp9VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -432,7 +442,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">lag_in_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the lag_in_frames of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the lag_in_frames of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Number of frames to look ahead for alternate reference frame selection.</span>
 
@@ -444,7 +454,7 @@
     <span class="nd">@lag_in_frames</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">lag_in_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lag_in_frames</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the lag_in_frames of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the lag_in_frames of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Number of frames to look ahead for alternate reference frame selection.</span>
 
@@ -465,7 +475,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">error_resiliency_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the error_resiliency_enabled of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the error_resiliency_enabled of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enables error resiliency feature</span>
 
@@ -477,7 +487,7 @@
     <span class="nd">@error_resiliency_enabled</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">error_resiliency_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error_resiliency_enabled</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the error_resiliency_enabled of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the error_resiliency_enabled of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enables error resiliency feature</span>
 
@@ -494,7 +504,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">tile_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the tile_columns of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the tile_columns of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Number of tile columns to use, log2. Depending on the encoding width there are limitations on this value. The minimum values are 2 for width &gt;= 1920 and 1 for width &gt;= 1280. The minimum width of each tile is 256 pixels so the maximum values are 0 for width &lt; 256, 1 for width &lt; 512, 2 for width &lt; 1024, 3 for width &lt; 2048, 4 for width &lt; 4096, 5 for width &lt; 8192. If the value is too high or too low it will be overridden.</span>
 
@@ -506,7 +516,7 @@
     <span class="nd">@tile_columns</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">tile_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tile_columns</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the tile_columns of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the tile_columns of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Number of tile columns to use, log2. Depending on the encoding width there are limitations on this value. The minimum values are 2 for width &gt;= 1920 and 1 for width &gt;= 1280. The minimum width of each tile is 256 pixels so the maximum values are 0 for width &lt; 256, 1 for width &lt; 512, 2 for width &lt; 1024, 3 for width &lt; 2048, 4 for width &lt; 4096, 5 for width &lt; 8192. If the value is too high or too low it will be overridden.</span>
 
@@ -527,7 +537,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">tile_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the tile_rows of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the tile_rows of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Number of tile rows to use, log2.</span>
 
@@ -539,7 +549,7 @@
     <span class="nd">@tile_rows</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">tile_rows</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tile_rows</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the tile_rows of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the tile_rows of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Number of tile rows to use, log2.</span>
 
@@ -560,7 +570,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">frame_parallel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the frame_parallel of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the frame_parallel of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable frame parallel decodability features</span>
 
@@ -572,7 +582,7 @@
     <span class="nd">@frame_parallel</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">frame_parallel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">frame_parallel</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the frame_parallel of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the frame_parallel of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable frame parallel decodability features</span>
 
@@ -589,7 +599,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_intra_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_intra_rate of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_intra_rate of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Maximum I-frame bitrate (percentage) 0=unlimited</span>
 
@@ -601,7 +611,7 @@
     <span class="nd">@max_intra_rate</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_intra_rate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_intra_rate</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_intra_rate of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_intra_rate of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Maximum I-frame bitrate (percentage) 0=unlimited</span>
 
@@ -618,9 +628,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the qp_min of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_min of this Vp9VideoConfiguration.</span>
 
-<span class="sd">        Sets the minimum of quantization factor.</span>
+<span class="sd">        Minimum quantization factor.</span>
 
 <span class="sd">        :return: The qp_min of this Vp9VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -630,9 +640,9 @@
     <span class="nd">@qp_min</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">qp_min</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_min</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the qp_min of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_min of this Vp9VideoConfiguration.</span>
 
-<span class="sd">        Sets the minimum of quantization factor.</span>
+<span class="sd">        Minimum quantization factor.</span>
 
 <span class="sd">        :param qp_min: The qp_min of this Vp9VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -651,9 +661,9 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the qp_max of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the qp_max of this Vp9VideoConfiguration.</span>
 
-<span class="sd">        Sets the maximum of quantization factor.</span>
+<span class="sd">        Maximum quantization factor.</span>
 
 <span class="sd">        :return: The qp_max of this Vp9VideoConfiguration.</span>
 <span class="sd">        :rtype: int</span>
@@ -663,9 +673,9 @@
     <span class="nd">@qp_max</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">qp_max</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qp_max</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the qp_max of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the qp_max of this Vp9VideoConfiguration.</span>
 
-<span class="sd">        Sets the maximum of quantization factor.</span>
+<span class="sd">        Maximum quantization factor.</span>
 
 <span class="sd">        :param qp_max: The qp_max of this Vp9VideoConfiguration.</span>
 <span class="sd">        :type: int</span>
@@ -684,7 +694,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rate_undershoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the rate_undershoot_pct of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate_undershoot_pct of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Datarate undershoot (min) target (percentage).</span>
 
@@ -696,7 +706,7 @@
     <span class="nd">@rate_undershoot_pct</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">rate_undershoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_undershoot_pct</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the rate_undershoot_pct of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate_undershoot_pct of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Datarate undershoot (min) target (percentage).</span>
 
@@ -717,7 +727,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">rate_overshoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the rate_overshoot_pct of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the rate_overshoot_pct of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Datarate overshoot (max) target (percentage).</span>
 
@@ -729,7 +739,7 @@
     <span class="nd">@rate_overshoot_pct</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">rate_overshoot_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rate_overshoot_pct</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the rate_overshoot_pct of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the rate_overshoot_pct of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Datarate overshoot (max) target (percentage).</span>
 
@@ -750,7 +760,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">client_buffer_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the client_buffer_size of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the client_buffer_size of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Client buffer size (ms)</span>
 
@@ -762,7 +772,7 @@
     <span class="nd">@client_buffer_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">client_buffer_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_buffer_size</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the client_buffer_size of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the client_buffer_size of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Client buffer size (ms)</span>
 
@@ -781,7 +791,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">client_initial_buffer_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the client_initial_buffer_size of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the client_initial_buffer_size of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Client initial buffer size (ms)</span>
 
@@ -793,7 +803,7 @@
     <span class="nd">@client_initial_buffer_size</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">client_initial_buffer_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client_initial_buffer_size</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the client_initial_buffer_size of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the client_initial_buffer_size of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Client initial buffer size (ms)</span>
 
@@ -812,7 +822,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">bias_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the bias_pct of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the bias_pct of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        CBR/VBR bias (0=CBR, 100=VBR)</span>
 
@@ -824,7 +834,7 @@
     <span class="nd">@bias_pct</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">bias_pct</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bias_pct</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the bias_pct of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the bias_pct of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        CBR/VBR bias (0=CBR, 100=VBR)</span>
 
@@ -845,7 +855,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">noise_sensitivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the noise_sensitivity of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the noise_sensitivity of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable noise sensitivity on Y channel</span>
 
@@ -857,7 +867,7 @@
     <span class="nd">@noise_sensitivity</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">noise_sensitivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">noise_sensitivity</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the noise_sensitivity of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the noise_sensitivity of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable noise sensitivity on Y channel</span>
 
@@ -874,7 +884,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">cpu_used</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the cpu_used of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the cpu_used of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding. The minimum value for width * height &gt;= 1280 * 720 is 2. If the value is too low it will be overridden.</span>
 
@@ -886,7 +896,7 @@
     <span class="nd">@cpu_used</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">cpu_used</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cpu_used</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the cpu_used of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the cpu_used of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Controls the tradeoff between compression efficiency and encoding speed. Higher values indicate a faster encoding. The minimum value for width * height &gt;= 1280 * 720 is 2. If the value is too low it will be overridden.</span>
 
@@ -907,7 +917,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">automatic_alt_ref_frames_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable automatic alternate reference frames (2pass only)</span>
 
@@ -919,7 +929,7 @@
     <span class="nd">@automatic_alt_ref_frames_enabled</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">automatic_alt_ref_frames_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">automatic_alt_ref_frames_enabled</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the automatic_alt_ref_frames_enabled of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable automatic alternate reference frames (2pass only)</span>
 
@@ -936,7 +946,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">target_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the target_level of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the target_level of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Target level (255: off, 0: only keep level stats; 10: level 1.0; 11: level 1.1; ... 62: level 6.2)</span>
 
@@ -948,7 +958,7 @@
     <span class="nd">@target_level</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">target_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_level</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the target_level of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the target_level of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Target level (255: off, 0: only keep level stats; 10: level 1.0; 11: level 1.1; ... 62: level 6.2)</span>
 
@@ -969,7 +979,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">row_multi_threading_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the row_multi_threading_enabled of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the row_multi_threading_enabled of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable row based non-deterministic multi-threading</span>
 
@@ -981,7 +991,7 @@
     <span class="nd">@row_multi_threading_enabled</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">row_multi_threading_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row_multi_threading_enabled</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the row_multi_threading_enabled of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the row_multi_threading_enabled of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Enable row based non-deterministic multi-threading</span>
 
@@ -998,7 +1008,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">sharpness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the sharpness of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the sharpness of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Loop filter sharpness.</span>
 
@@ -1010,7 +1020,7 @@
     <span class="nd">@sharpness</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">sharpness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sharpness</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the sharpness of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the sharpness of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Loop filter sharpness.</span>
 
@@ -1031,7 +1041,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the min_gop of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_gop of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Minimum GOP length, the minimum distance between I-frames.</span>
 
@@ -1043,7 +1053,7 @@
     <span class="nd">@min_gop</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">min_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_gop</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the min_gop of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_gop of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Minimum GOP length, the minimum distance between I-frames.</span>
 
@@ -1060,7 +1070,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_gop of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_gop of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Maximum GOP length, the maximum distance between I-frames</span>
 
@@ -1072,7 +1082,7 @@
     <span class="nd">@max_gop</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_gop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_gop</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_gop of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_gop of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Maximum GOP length, the maximum distance between I-frames</span>
 
@@ -1089,7 +1099,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the min_keyframe_interval of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the min_keyframe_interval of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Minimum interval in seconds between key frames</span>
 
@@ -1101,7 +1111,7 @@
     <span class="nd">@min_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">min_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_keyframe_interval</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the min_keyframe_interval of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the min_keyframe_interval of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Minimum interval in seconds between key frames</span>
 
@@ -1118,7 +1128,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; float</span>
-        <span class="sd">&quot;&quot;&quot;Gets the max_keyframe_interval of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the max_keyframe_interval of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Maximum interval in seconds between key frames</span>
 
@@ -1130,7 +1140,7 @@
     <span class="nd">@max_keyframe_interval</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">max_keyframe_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_keyframe_interval</span><span class="p">):</span>
         <span class="c1"># type: (float) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the max_keyframe_interval of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the max_keyframe_interval of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Maximum interval in seconds between key frames</span>
 
@@ -1147,7 +1157,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">quality</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Vp9Quality</span>
-        <span class="sd">&quot;&quot;&quot;Gets the quality of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the quality of this Vp9VideoConfiguration.</span>
 
 
 <span class="sd">        :return: The quality of this Vp9VideoConfiguration.</span>
@@ -1158,7 +1168,7 @@
     <span class="nd">@quality</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">quality</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">quality</span><span class="p">):</span>
         <span class="c1"># type: (Vp9Quality) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the quality of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the quality of this Vp9VideoConfiguration.</span>
 
 
 <span class="sd">        :param quality: The quality of this Vp9VideoConfiguration.</span>
@@ -1174,7 +1184,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">lossless</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; bool</span>
-        <span class="sd">&quot;&quot;&quot;Gets the lossless of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the lossless of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Lossless mode</span>
 
@@ -1186,7 +1196,7 @@
     <span class="nd">@lossless</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">lossless</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lossless</span><span class="p">):</span>
         <span class="c1"># type: (bool) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the lossless of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the lossless of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        Lossless mode</span>
 
@@ -1203,7 +1213,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">static_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the static_thresh of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the static_thresh of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        A change threshold on blocks below which they will be skipped by the encoder.</span>
 
@@ -1215,7 +1225,7 @@
     <span class="nd">@static_thresh</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">static_thresh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">static_thresh</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the static_thresh of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the static_thresh of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        A change threshold on blocks below which they will be skipped by the encoder.</span>
 
@@ -1234,7 +1244,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">aq_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Vp9AqMode</span>
-        <span class="sd">&quot;&quot;&quot;Gets the aq_mode of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the aq_mode of this Vp9VideoConfiguration.</span>
 
 
 <span class="sd">        :return: The aq_mode of this Vp9VideoConfiguration.</span>
@@ -1245,7 +1255,7 @@
     <span class="nd">@aq_mode</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">aq_mode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aq_mode</span><span class="p">):</span>
         <span class="c1"># type: (Vp9AqMode) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the aq_mode of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the aq_mode of this Vp9VideoConfiguration.</span>
 
 
 <span class="sd">        :param aq_mode: The aq_mode of this Vp9VideoConfiguration.</span>
@@ -1261,7 +1271,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">arnr_max_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the arnr_max_frames of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the arnr_max_frames of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        altref noise reduction max frame count.</span>
 
@@ -1273,7 +1283,7 @@
     <span class="nd">@arnr_max_frames</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">arnr_max_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arnr_max_frames</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the arnr_max_frames of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the arnr_max_frames of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        altref noise reduction max frame count.</span>
 
@@ -1294,7 +1304,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">arnr_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; int</span>
-        <span class="sd">&quot;&quot;&quot;Gets the arnr_strength of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the arnr_strength of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        altref noise reduction filter strength.</span>
 
@@ -1306,7 +1316,7 @@
     <span class="nd">@arnr_strength</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">arnr_strength</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arnr_strength</span><span class="p">):</span>
         <span class="c1"># type: (int) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the arnr_strength of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the arnr_strength of this Vp9VideoConfiguration.</span>
 
 <span class="sd">        altref noise reduction filter strength.</span>
 
@@ -1327,7 +1337,7 @@
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">arnr_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="c1"># type: () -&gt; Vp9ArnrType</span>
-        <span class="sd">&quot;&quot;&quot;Gets the arnr_type of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the arnr_type of this Vp9VideoConfiguration.</span>
 
 
 <span class="sd">        :return: The arnr_type of this Vp9VideoConfiguration.</span>
@@ -1338,7 +1348,7 @@
     <span class="nd">@arnr_type</span><span class="o">.</span><span class="n">setter</span>
     <span class="k">def</span> <span class="nf">arnr_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">arnr_type</span><span class="p">):</span>
         <span class="c1"># type: (Vp9ArnrType) -&gt; None</span>
-        <span class="sd">&quot;&quot;&quot;Sets the arnr_type of this Vp9VideoConfiguration.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the arnr_type of this Vp9VideoConfiguration.</span>
 
 
 <span class="sd">        :param arnr_type: The arnr_type of this Vp9VideoConfiguration.</span>
@@ -1351,8 +1361,37 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_arnr_type</span> <span class="o">=</span> <span class="n">arnr_type</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; AutoLevelSetup</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Gets the auto_level_setup of this Vp9VideoConfiguration.</span>
+
+<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting rateOvershootPct, or clientBufferSize properties will disable the automatic calculation.</span>
+
+<span class="sd">        :return: The auto_level_setup of this Vp9VideoConfiguration.</span>
+<span class="sd">        :rtype: AutoLevelSetup</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span>
+
+    <span class="nd">@auto_level_setup</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">auto_level_setup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">auto_level_setup</span><span class="p">):</span>
+        <span class="c1"># type: (AutoLevelSetup) -&gt; None</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the auto_level_setup of this Vp9VideoConfiguration.</span>
+
+<span class="sd">        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting rateOvershootPct, or clientBufferSize properties will disable the automatic calculation.</span>
+
+<span class="sd">        :param auto_level_setup: The auto_level_setup of this Vp9VideoConfiguration.</span>
+<span class="sd">        :type: AutoLevelSetup</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">auto_level_setup</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">auto_level_setup</span><span class="p">,</span> <span class="n">AutoLevelSetup</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_auto_level_setup</span> <span class="o">=</span> <span class="n">auto_level_setup</span>
+
 <div class="viewcode-block" id="Vp9VideoConfiguration.to_dict"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp9_video_configuration.Vp9VideoConfiguration.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the model properties as a dict&quot;&quot;&quot;</span>
         <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">Vp9VideoConfiguration</span><span class="p">,</span> <span class="bp">self</span><span class="p">),</span> <span class="s2">&quot;to_dict&quot;</span><span class="p">):</span>
@@ -1377,22 +1416,22 @@
         <span class="k">return</span> <span class="n">result</span></div>
 
 <div class="viewcode-block" id="Vp9VideoConfiguration.to_str"><a class="viewcode-back" href="../../../__modules/bitmovin_api_sdk.models.html#bitmovin_api_sdk.models.vp9_video_configuration.Vp9VideoConfiguration.to_str">[docs]</a>    <span class="k">def</span> <span class="nf">to_str</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the string representation of the model&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">pprint</span><span class="o">.</span><span class="n">pformat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">to_dict</span><span class="p">())</span></div>
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;For `print` and `pprint`&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_str</span><span class="p">()</span>
 
     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are equal&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Vp9VideoConfiguration</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="vm">__dict__</span>
 
     <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns true if both objects are not equal&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span> <span class="o">==</span> <span class="n">other</span></div>
 </pre></div>
 

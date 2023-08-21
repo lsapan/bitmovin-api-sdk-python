@@ -115,7 +115,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> list[LiveHlsManifest]
         """Gets the hls_manifests of this StartLiveEncodingRequest.
 
-        List of Hls manifests to use for this live encoding
+        HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The hls_manifests of this StartLiveEncodingRequest.
         :rtype: list[LiveHlsManifest]
@@ -127,7 +127,7 @@ class StartLiveEncodingRequest(object):
         # type: (list) -> None
         """Sets the hls_manifests of this StartLiveEncodingRequest.
 
-        List of Hls manifests to use for this live encoding
+        HLS manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param hls_manifests: The hls_manifests of this StartLiveEncodingRequest.
         :type: list[LiveHlsManifest]
@@ -144,7 +144,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> list[LiveDashManifest]
         """Gets the dash_manifests of this StartLiveEncodingRequest.
 
-        List of Dash manifests to use for this live encoding
+        DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :return: The dash_manifests of this StartLiveEncodingRequest.
         :rtype: list[LiveDashManifest]
@@ -156,7 +156,7 @@ class StartLiveEncodingRequest(object):
         # type: (list) -> None
         """Sets the dash_manifests of this StartLiveEncodingRequest.
 
-        List of Dash manifests to use for this live encoding
+        DASH manifests to be generated during the encoding. See [documentation](https://developer.bitmovin.com/encoding/docs/how-to-create-manifests-for-your-encodings#just-in-time-jit)
 
         :param dash_manifests: The dash_manifests of this StartLiveEncodingRequest.
         :type: list[LiveDashManifest]
@@ -173,7 +173,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> EncodingMode
         """Gets the live_encoding_mode of this StartLiveEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :return: The live_encoding_mode of this StartLiveEncodingRequest.
         :rtype: EncodingMode
@@ -185,7 +185,7 @@ class StartLiveEncodingRequest(object):
         # type: (EncodingMode) -> None
         """Sets the live_encoding_mode of this StartLiveEncodingRequest.
 
-        The pass mode of the encoding
+        The pass mode of the encoding. Must only be set when `encodingMode` is not set on any codec configuration used by this encoding.
 
         :param live_encoding_mode: The live_encoding_mode of this StartLiveEncodingRequest.
         :type: EncodingMode
@@ -231,7 +231,7 @@ class StartLiveEncodingRequest(object):
         # type: () -> ManifestGenerator
         """Gets the manifest_generator of this StartLiveEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Major version of the manifest generator to be used for manifests referenced in this request (by properties dashManifests, dashManifests). `V2` is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. 
 
         :return: The manifest_generator of this StartLiveEncodingRequest.
         :rtype: ManifestGenerator
@@ -243,7 +243,7 @@ class StartLiveEncodingRequest(object):
         # type: (ManifestGenerator) -> None
         """Sets the manifest_generator of this StartLiveEncodingRequest.
 
-        Sets the version of the manifest generation engine
+        Major version of the manifest generator to be used for manifests referenced in this request (by properties dashManifests, dashManifests). `V2` is available for encoder versions 2.70.0 and above and is the recommended option. The default value depends on the sign-up date of your organization. See [documentation](https://developer.bitmovin.com/encoding/docs/manifest-generator-v2) page for a detailed explanation. 
 
         :param manifest_generator: The manifest_generator of this StartLiveEncodingRequest.
         :type: ManifestGenerator

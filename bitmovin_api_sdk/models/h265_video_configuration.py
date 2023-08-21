@@ -4,6 +4,7 @@ from enum import Enum
 from six import string_types, iteritems
 from bitmovin_api_sdk.common.poscheck import poscheck_model
 from bitmovin_api_sdk.models.adaptive_quant_mode import AdaptiveQuantMode
+from bitmovin_api_sdk.models.auto_level_setup import AutoLevelSetup
 from bitmovin_api_sdk.models.b_adapt import BAdapt
 from bitmovin_api_sdk.models.cea608708_subtitle_configuration import Cea608708SubtitleConfiguration
 from bitmovin_api_sdk.models.color_config import ColorConfig
@@ -147,8 +148,9 @@ class H265VideoConfiguration(VideoConfiguration):
                  sao_non_deblock=None,
                  limit_sao=None,
                  lowpass_dct=None,
-                 cea608708_subtitle_config=None):
-        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H265DynamicRangeFormat, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration) -> None
+                 cea608708_subtitle_config=None,
+                 auto_level_setup=None):
+        # type: (string_types, string_types, string_types, datetime, datetime, dict, int, int, int, float, PixelFormat, ColorConfig, int, int, DisplayAspectRatio, EncodingMode, PresetConfiguration, H265DynamicRangeFormat, float, ProfileH265, int, int, int, int, int, int, int, int, bool, float, float, LevelH265, int, BAdapt, MaxCtuSize, TuIntraDepth, TuInterDepth, MotionSearch, int, int, bool, bool, bool, string_types, int, int, bool, int, AdaptiveQuantMode, bool, VideoFormat, float, float, bool, bool, MinCodingUnitSize, int, LimitReferences, bool, bool, bool, int, bool, bool, bool, bool, bool, int, RateDistortionLevelForQuantization, int, int, bool, int, bool, bool, bool, bool, TransformSkipMode, bool, LimitTransformUnitDepthRecursionMode, int, int, RateDistortionPenaltyMode, MaxTransformUnitSize, int, bool, bool, bool, bool, bool, float, int, int, int, ForceFlushMode, float, bool, QuantizationGroupSize, bool, int, int, float, float, float, int, bool, float, float, bool, bool, bool, Cea608708SubtitleConfiguration, AutoLevelSetup) -> None
         super(H265VideoConfiguration, self).__init__(id_=id_, name=name, description=description, created_at=created_at, modified_at=modified_at, custom_data=custom_data, width=width, height=height, bitrate=bitrate, rate=rate, pixel_format=pixel_format, color_config=color_config, sample_aspect_ratio_numerator=sample_aspect_ratio_numerator, sample_aspect_ratio_denominator=sample_aspect_ratio_denominator, display_aspect_ratio=display_aspect_ratio, encoding_mode=encoding_mode)
 
         self._preset_configuration = None
@@ -247,6 +249,7 @@ class H265VideoConfiguration(VideoConfiguration):
         self._limit_sao = None
         self._lowpass_dct = None
         self._cea608708_subtitle_config = None
+        self._auto_level_setup = None
         self.discriminator = None
 
         if preset_configuration is not None:
@@ -441,6 +444,8 @@ class H265VideoConfiguration(VideoConfiguration):
             self.lowpass_dct = lowpass_dct
         if cea608708_subtitle_config is not None:
             self.cea608708_subtitle_config = cea608708_subtitle_config
+        if auto_level_setup is not None:
+            self.auto_level_setup = auto_level_setup
 
     @property
     def openapi_types(self):
@@ -545,7 +550,8 @@ class H265VideoConfiguration(VideoConfiguration):
             'sao_non_deblock': 'bool',
             'limit_sao': 'bool',
             'lowpass_dct': 'bool',
-            'cea608708_subtitle_config': 'Cea608708SubtitleConfiguration'
+            'cea608708_subtitle_config': 'Cea608708SubtitleConfiguration',
+            'auto_level_setup': 'AutoLevelSetup'
         })
 
         return types
@@ -653,7 +659,8 @@ class H265VideoConfiguration(VideoConfiguration):
             'sao_non_deblock': 'saoNonDeblock',
             'limit_sao': 'limitSao',
             'lowpass_dct': 'lowpassDct',
-            'cea608708_subtitle_config': 'cea608708SubtitleConfig'
+            'cea608708_subtitle_config': 'cea608708SubtitleConfig',
+            'auto_level_setup': 'autoLevelSetup'
         })
         return attributes
 
@@ -720,7 +727,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> float
         """Gets the crf of this H265VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :return: The crf of this H265VideoConfiguration.
         :rtype: float
@@ -732,7 +739,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (float) -> None
         """Sets the crf of this H265VideoConfiguration.
 
-        Sets the constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
+        Constant rate factor for quality-based variable bitrate. Either bitrate or crf is required.
 
         :param crf: The crf of this H265VideoConfiguration.
         :type: float
@@ -780,7 +787,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bframes of this H265VideoConfiguration.
 
-        Sets the amount of b frames
+        Amount of b frames
 
         :return: The bframes of this H265VideoConfiguration.
         :rtype: int
@@ -792,7 +799,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bframes of this H265VideoConfiguration.
 
-        Sets the amount of b frames
+        Amount of b frames
 
         :param bframes: The bframes of this H265VideoConfiguration.
         :type: int
@@ -813,7 +820,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the ref_frames of this H265VideoConfiguration.
 
-        Sets the amount of reference frames
+        Amount of reference frames
 
         :return: The ref_frames of this H265VideoConfiguration.
         :rtype: int
@@ -825,7 +832,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the ref_frames of this H265VideoConfiguration.
 
-        Sets the amount of reference frames
+        Amount of reference frames
 
         :param ref_frames: The ref_frames of this H265VideoConfiguration.
         :type: int
@@ -846,7 +853,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp of this H265VideoConfiguration.
 
-        Sets the quantization factor
+        Quantization factor
 
         :return: The qp of this H265VideoConfiguration.
         :rtype: int
@@ -858,7 +865,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp of this H265VideoConfiguration.
 
-        Sets the quantization factor
+        Quantization factor
 
         :param qp: The qp of this H265VideoConfiguration.
         :type: int
@@ -937,7 +944,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the bufsize of this H265VideoConfiguration.
 
-        Specify the size of the VBV buffer (kbits)
+        Size of the VBV buffer (kbits)
 
         :return: The bufsize of this H265VideoConfiguration.
         :rtype: int
@@ -949,7 +956,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the bufsize of this H265VideoConfiguration.
 
-        Specify the size of the VBV buffer (kbits)
+        Size of the VBV buffer (kbits)
 
         :param bufsize: The bufsize of this H265VideoConfiguration.
         :type: int
@@ -2196,7 +2203,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> RateDistortionLevelForQuantization
         """Gets the rate_distortion_level_for_quantization of this H265VideoConfiguration.
 
-        Specify the amount of rate-distortion analysis to use within quantization.
+        Specifies the amount of rate-distortion analysis to use within quantization.
 
         :return: The rate_distortion_level_for_quantization of this H265VideoConfiguration.
         :rtype: RateDistortionLevelForQuantization
@@ -2208,7 +2215,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (RateDistortionLevelForQuantization) -> None
         """Sets the rate_distortion_level_for_quantization of this H265VideoConfiguration.
 
-        Specify the amount of rate-distortion analysis to use within quantization.
+        Specifies the amount of rate-distortion analysis to use within quantization.
 
         :param rate_distortion_level_for_quantization: The rate_distortion_level_for_quantization of this H265VideoConfiguration.
         :type: RateDistortionLevelForQuantization
@@ -2225,7 +2232,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_min of this H265VideoConfiguration.
 
-        Sets the minimum of quantization factor. Valid value range: 0 - 69
+        Minimum quantization factor. Valid value range: 0 - 69
 
         :return: The qp_min of this H265VideoConfiguration.
         :rtype: int
@@ -2237,13 +2244,17 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_min of this H265VideoConfiguration.
 
-        Sets the minimum of quantization factor. Valid value range: 0 - 69
+        Minimum quantization factor. Valid value range: 0 - 69
 
         :param qp_min: The qp_min of this H265VideoConfiguration.
         :type: int
         """
 
         if qp_min is not None:
+            if qp_min is not None and qp_min > 69:
+                raise ValueError("Invalid value for `qp_min`, must be a value less than or equal to `69`")
+            if qp_min is not None and qp_min < 0:
+                raise ValueError("Invalid value for `qp_min`, must be a value greater than or equal to `0`")
             if not isinstance(qp_min, int):
                 raise TypeError("Invalid type for `qp_min`, type has to be `int`")
 
@@ -2254,7 +2265,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> int
         """Gets the qp_max of this H265VideoConfiguration.
 
-        Sets the maximum of quantization factor. Valid value range: 0 - 69
+        Maximum quantization factor. Valid value range: 0 - 69
 
         :return: The qp_max of this H265VideoConfiguration.
         :rtype: int
@@ -2266,13 +2277,17 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (int) -> None
         """Sets the qp_max of this H265VideoConfiguration.
 
-        Sets the maximum of quantization factor. Valid value range: 0 - 69
+        Maximum quantization factor. Valid value range: 0 - 69
 
         :param qp_max: The qp_max of this H265VideoConfiguration.
         :type: int
         """
 
         if qp_max is not None:
+            if qp_max is not None and qp_max > 69:
+                raise ValueError("Invalid value for `qp_max`, must be a value less than or equal to `69`")
+            if qp_max is not None and qp_max < 0:
+                raise ValueError("Invalid value for `qp_max`, must be a value greater than or equal to `0`")
             if not isinstance(qp_max, int):
                 raise TypeError("Invalid type for `qp_max`, type has to be `int`")
 
@@ -3243,7 +3258,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: () -> float
         """Gets the quantizer_curve_compression_factor of this H265VideoConfiguration.
 
-        Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
+        Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
 
         :return: The quantizer_curve_compression_factor of this H265VideoConfiguration.
         :rtype: float
@@ -3255,7 +3270,7 @@ class H265VideoConfiguration(VideoConfiguration):
         # type: (float) -> None
         """Sets the quantizer_curve_compression_factor of this H265VideoConfiguration.
 
-        Sets the quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
+        Quantizer curve compression factor. It weights the frame quantizer based on the complexity of residual (measured by lookahead). Default 0.6
 
         :param quantizer_curve_compression_factor: The quantizer_curve_compression_factor of this H265VideoConfiguration.
         :type: float
@@ -3502,6 +3517,35 @@ class H265VideoConfiguration(VideoConfiguration):
                 raise TypeError("Invalid type for `cea608708_subtitle_config`, type has to be `Cea608708SubtitleConfiguration`")
 
         self._cea608708_subtitle_config = cea608708_subtitle_config
+
+    @property
+    def auto_level_setup(self):
+        # type: () -> AutoLevelSetup
+        """Gets the auto_level_setup of this H265VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting maxBitrate, or bufsize properties will disable the automatic calculation.
+
+        :return: The auto_level_setup of this H265VideoConfiguration.
+        :rtype: AutoLevelSetup
+        """
+        return self._auto_level_setup
+
+    @auto_level_setup.setter
+    def auto_level_setup(self, auto_level_setup):
+        # type: (AutoLevelSetup) -> None
+        """Sets the auto_level_setup of this H265VideoConfiguration.
+
+        Enable/disable automatic calculation of level, maxBitrate, and bufsize based on the least level that satisfies maximum property values for picture resolution, frame rate, and bit rate. In the case the target level is set explicitly, the maximum bitrate and buffer size are calculated based on the defined level. Explicitly setting maxBitrate, or bufsize properties will disable the automatic calculation.
+
+        :param auto_level_setup: The auto_level_setup of this H265VideoConfiguration.
+        :type: AutoLevelSetup
+        """
+
+        if auto_level_setup is not None:
+            if not isinstance(auto_level_setup, AutoLevelSetup):
+                raise TypeError("Invalid type for `auto_level_setup`, type has to be `AutoLevelSetup`")
+
+        self._auto_level_setup = auto_level_setup
 
     def to_dict(self):
         """Returns the model properties as a dict"""

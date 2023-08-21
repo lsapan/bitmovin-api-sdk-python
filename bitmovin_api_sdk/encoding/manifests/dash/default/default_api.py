@@ -23,11 +23,11 @@ class DefaultApi(BaseApi):
 
     def create(self, dash_manifest_default, **kwargs):
         # type: (DashManifestDefault, dict) -> DashManifestDefault
-        """Create DASH Manifest Default
+        """Create Default DASH Manifest
 
-        :param dash_manifest_default: The DASH Manifest Default to be created
+        :param dash_manifest_default: The Default DASH Manifest to be created.
         :type dash_manifest_default: DashManifestDefault, required
-        :return: Id of the dash manifest
+        :return: Id of the DASH Manifest
         :rtype: DashManifestDefault
         """
 

@@ -1100,6 +1100,14 @@ bitmovin\_api\_sdk.models.audio\_volume\_unit module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.auto\_level\_setup module
+---------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.auto_level_setup
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.auto\_representation module
 -----------------------------------------------------
 
@@ -1288,46 +1296,6 @@ bitmovin\_api\_sdk.models.bitmovin\_response\_list module
 ---------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.bitmovin_response_list
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.bitmovin\_stream\_encoding\_status module
--------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_encoding_status
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.bitmovin\_stream\_encoding\_task module
------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_encoding_task
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.bitmovin\_stream\_quality module
-----------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_quality
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.bitmovin\_stream\_response module
------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_response
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.bitmovin\_stream\_status module
----------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.bitmovin_stream_status
    :members:
    :undoc-members:
    :show-inheritance:
@@ -1548,6 +1516,22 @@ bitmovin\_api\_sdk.models.channels\_attribute\_for\_audio module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.check\_output\_permissions\_request module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.check_output_permissions_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.check\_output\_permissions\_response module
+---------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.check_output_permissions_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.chroma\_location module
 -------------------------------------------------
 
@@ -1736,14 +1720,6 @@ bitmovin\_api\_sdk.models.convert\_scc\_position\_mode module
 -------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.convert_scc_position_mode
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.create\_bitmovin\_stream\_request module
-------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.create_bitmovin_stream_request
    :members:
    :undoc-members:
    :show-inheritance:
@@ -3260,6 +3236,30 @@ bitmovin\_api\_sdk.models.he\_aac\_v2\_signaling module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.history\_encoding module
+--------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.history_encoding
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.history\_muxing module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.history_muxing
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.history\_stream module
+------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.history_stream
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.hls\_manifest module
 ----------------------------------------------
 
@@ -3692,6 +3692,14 @@ bitmovin\_api\_sdk.models.live\_encoding\_event\_name module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.live\_encoding\_options\_statistics module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_encoding_options_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.live\_encoding\_stats module
 ------------------------------------------------------
 
@@ -3736,6 +3744,46 @@ bitmovin\_api\_sdk.models.live\_media\_ingest\_output module
 ------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.live_media_ingest_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_breakdown\_entry module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_breakdown_entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_entry module
+-----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_entry
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_statistics module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_summary module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_summary
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.live\_options\_type module
+----------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.live_options_type
    :members:
    :undoc-members:
    :show-inheritance:
@@ -4476,6 +4524,22 @@ bitmovin\_api\_sdk.models.profile\_h265 module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.program\_date\_time\_settings module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.program_date_time_settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.program\_date\_time\_source module
+------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.program_date_time_source
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.progressive\_mov\_muxing module
 ---------------------------------------------------------
 
@@ -5036,6 +5100,14 @@ bitmovin\_api\_sdk.models.simple\_encoding\_live\_max\_resolution module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.simple\_encoding\_live\_profile module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_live_profile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_access\_key\_credentials module
 -------------------------------------------------------------------------------------
 
@@ -5116,10 +5188,26 @@ bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_input\_type module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_options module
+--------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_options
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output module
 -------------------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.simple\_encoding\_vod\_job\_output\_artifact module
+-----------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.simple_encoding_vod_job_output_artifact
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5380,6 +5468,14 @@ bitmovin\_api\_sdk.models.start\_encoding\_request module
    :undoc-members:
    :show-inheritance:
 
+bitmovin\_api\_sdk.models.start\_live\_channel\_encoding\_request module
+------------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.start_live_channel_encoding_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 bitmovin\_api\_sdk.models.start\_live\_encoding\_request module
 ---------------------------------------------------------------
 
@@ -5576,6 +5672,150 @@ bitmovin\_api\_sdk.models.stream\_selection\_mode module
 --------------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.stream_selection_mode
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_ad\_config\_ad module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_ad_config_ad
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_ad\_config\_response module
+--------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_ad_config_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_content\_protection\_response module
+-----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_content_protection_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_live\_create\_request module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_create_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_live\_life\_cycle module
+-----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_life_cycle
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_live\_response module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_live\_update\_request module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_live_update_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_search\_response module
+----------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_search_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_style\_config\_player\_style module
+----------------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_style_config_player_style
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_style\_config\_response module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_style_config_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_type module
+----------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_type
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_create\_request module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_create_request
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_encoding\_status module
+-----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_encoding_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_encoding\_task module
+---------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_encoding_task
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_quality module
+--------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_quality
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_response module
+---------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_response
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_status module
+-------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_status
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+bitmovin\_api\_sdk.models.streams\_video\_update\_request module
+----------------------------------------------------------------
+
+.. automodule:: bitmovin_api_sdk.models.streams_video_update_request
    :members:
    :undoc-members:
    :show-inheritance:
@@ -5832,14 +6072,6 @@ bitmovin\_api\_sdk.models.unsharp\_filter module
 ------------------------------------------------
 
 .. automodule:: bitmovin_api_sdk.models.unsharp_filter
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-bitmovin\_api\_sdk.models.update\_bitmovin\_stream\_request module
-------------------------------------------------------------------
-
-.. automodule:: bitmovin_api_sdk.models.update_bitmovin_stream_request
    :members:
    :undoc-members:
    :show-inheritance:
